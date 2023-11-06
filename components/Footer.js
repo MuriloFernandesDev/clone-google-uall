@@ -1,20 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const Footer = () => {
-    return (
-        <footer className="absolute bottom-0 left-[50%] translate-x-[-50%] whitespace-nowrap p-6 text-sm text-gray-600">
-            <p>
-                Copyright &copy; {new Date().getFullYear()}{' '}
-                <a
-                    href="https://dev-nym.web.app/"
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    Md Nayem Hossain
-                </a>
-            </p>
-        </footer>
-    );
+  return (
+    <footer className="absolute bottom-0 left-[50%] translate-x-[-50%] whitespace-nowrap p-6 text-sm text-gray-600">
+      <p>Copyright &copy; {new Date().getFullYear()} </p>
+    </footer>
+  );
 };
 
 export default Footer;
