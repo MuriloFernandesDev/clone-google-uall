@@ -15,7 +15,7 @@ const SearchPage = ({ params }) => {
       <Header />
       <div className="max-w-7xl mx-auto mt-4 px-5">
         <div className="p-5 md:p-10 flex flex-col items-center justify-center text-xl md:text-5xl text-center gap-4 border rounded-xl shadow-lg">
-          <h1>{params.nome}</h1>
+          <h1>{params?.nome ?? "U-All Solutions"}</h1>
           <h2>Wi-fi Oferecido</h2>
         </div>
 
@@ -56,7 +56,9 @@ export async function getServerSideProps(context) {
     const data = await res.json();
     if (data.error) {
       return {
-        notFound: true,
+        props: {
+          params: null,
+        },
       };
     } else {
       return {
@@ -67,7 +69,9 @@ export async function getServerSideProps(context) {
     }
   } catch (err) {
     return {
-      notFound: true,
+      props: {
+        params: null,
+      },
     };
   }
 }
