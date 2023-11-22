@@ -1,7 +1,6 @@
 const PublicidadeItem = () => {
   return (
     <div className="border p-2 rounded-md shadow-lg">
-      {/* <Image src="/publi.webp" width={500} height={500} /> */}
       <amp-ad
         width="100vw"
         height="320"
@@ -13,6 +12,7 @@ const PublicidadeItem = () => {
       >
         <div overflow=""></div>
       </amp-ad>
+
       <hr className="mt-2" />
       <span className="text-xs font-normal">Publicidade</span>
     </div>
